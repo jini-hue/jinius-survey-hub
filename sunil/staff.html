@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>선일산업 숫자경영 사전 질문지 - 실무자용</title>
+  <style>
+    :root { --navy:#0b1f3a; --deep:#07162a; --line:#d8e2ef; --mist:#f4f7fb; --accent:#1f6feb; --ink:#172033; --muted:#667085; }
+    * { box-sizing:border-box; } body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Apple SD Gothic Neo','Noto Sans KR',sans-serif; background:linear-gradient(135deg,var(--deep),var(--navy) 42%,#123f73); color:var(--ink); }
+    .hero { color:white; padding:42px 18px 30px; text-align:center; } .hero .badge { display:inline-block; border:1px solid rgba(255,255,255,.32); border-radius:999px; padding:7px 13px; font-size:13px; margin-bottom:14px; background:rgba(255,255,255,.08); }
+    h1 { margin:0 auto 12px; max-width:860px; font-size:clamp(27px,5vw,42px); line-height:1.22; } .hero p { margin:0 auto; max-width:760px; color:#d9e6f8; line-height:1.65; }
+    .wrap { max-width:920px; margin:0 auto; padding:0 18px 60px; } .card { background:white; border:1px solid var(--line); border-radius:24px; padding:26px; box-shadow:0 24px 70px rgba(6,18,36,.22); }
+    .switch { display:flex; justify-content:space-between; gap:12px; align-items:center; background:var(--mist); border:1px solid var(--line); border-radius:16px; padding:14px 16px; margin-bottom:22px; color:var(--muted); font-size:14px; } .switch a { color:var(--accent); font-weight:700; text-decoration:none; }
+    .section-title { margin:30px 0 14px; padding:10px 14px; background:#edf4ff; border-left:5px solid var(--accent); border-radius:10px; font-weight:800; color:#10345f; }
+    .field { border:1px solid var(--line); border-radius:18px; padding:18px; margin:14px 0; background:#fff; } label { display:block; font-weight:750; line-height:1.5; } .num { display:inline-flex; width:26px; height:26px; align-items:center; justify-content:center; border-radius:50%; background:var(--navy); color:white; font-size:13px; margin-right:9px; }
+    .hint { margin:8px 0 12px 35px; color:var(--muted); font-size:14px; line-height:1.5; } input[type=text], textarea { width:100%; margin-top:12px; border:1px solid #cfd8e5; border-radius:14px; padding:13px 14px; font:inherit; line-height:1.5; outline:none; background:#fbfdff; } input:focus, textarea:focus { border-color:var(--accent); box-shadow:0 0 0 4px rgba(31,111,235,.12); background:white; }
+    .chips { display:flex; flex-wrap:wrap; gap:9px; margin-top:13px; } .chip { display:inline-flex; align-items:center; gap:7px; padding:9px 12px; border:1px solid #cfd8e5; border-radius:999px; background:#fbfdff; font-weight:600; cursor:pointer; } .chip:has(input:checked) { background:#eaf2ff; border-color:var(--accent); color:#0d4ea6; }
+    .actions { padding-top:22px; margin-top:18px; } button { width:100%; border:0; border-radius:16px; background:linear-gradient(135deg,#1f6feb,#0b4ab0); color:white; padding:17px 20px; font-size:17px; font-weight:850; cursor:pointer; box-shadow:0 12px 30px rgba(31,111,235,.28); } button:disabled { opacity:.55; cursor:not-allowed; }
+    .message { display:none; margin-top:14px; padding:14px; border-radius:14px; font-weight:700; } .ok { background:#ecfdf3; color:#087443; border:1px solid #abefc6; } .err { background:#fff1f3; color:#c01048; border:1px solid #fecdd6; }
+    footer { text-align:center; color:#cbd8ec; padding:20px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="hero"><div class="badge">JINIUS 숫자경영 사전진단 · 선일산업 전용</div><h1>선일산업 숫자경영 사전 질문지 - 실무자용</h1><p>실제 업무 흐름, 엑셀/수기 관리, 자료 전달, 업무 과부하를 파악하기 위한 질문입니다.<br>응답 내용은 지니어스 내부 진단용 구글시트에만 저장됩니다.</p></div>
+  <main class="wrap"><form id="survey" class="card">
+    <div class="switch"><span>현재 질문지: <b>실무자용</b></span><a href="/sunil/executive.html">임원진용으로 이동</a></div>
+    <div class="section-title">기본정보</div>
+        <div class="field">
+          <label><span class="num">1</span>성함</label>
+          
+          <input type="text" name="q0" required placeholder="답변을 입력해주세요">
+        </div>
+        <div class="field">
+          <label><span class="num">2</span>부서/직무</label>
+          <p class="hint">예: 현장관리, 공무, 경리/회계, 구매, 영업/견적 등</p>
+          <input type="text" name="q1" required placeholder="답변을 입력해주세요">
+        </div>
+        <div class="field">
+          <label><span class="num">3</span>주요 담당 업무</label>
+          
+          <textarea name="q2" rows="4" required placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">현재 업무방식</div>
+        <div class="field">
+          <label><span class="num">4</span>현재 가장 많이 사용하는 엑셀/대장/보고서 이름과 용도는 무엇인가요?</label>
+          
+          <textarea name="q3" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">5</span>같은 내용을 두 번 이상 입력하거나 옮겨 적는 업무가 있다면 무엇인가요?</label>
+          
+          <textarea name="q4" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">현장관리</div>
+        <div class="field">
+          <label><span class="num">6</span>현장별 계약금액·착공일·준공일·입금일정은 어디에 어떻게 관리하고 있나요?</label>
+          
+          <textarea name="q5" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">7</span>진행 중/보류/종료 현장 상태 변경은 누가, 어떤 기준으로 관리하나요?</label>
+          
+          <textarea name="q6" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">원가관리</div>
+        <div class="field">
+          <label><span class="num">8</span>현장별 지출/원가를 입력할 때 어떤 정보가 꼭 필요하나요?</label>
+          <p class="hint">현장명, 거래처, 지출일, 금액, 품목, 증빙, 계정과목 등</p>
+          <textarea name="q7" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">9</span>예상 원가와 실제 원가가 달라질 때 현재는 어떻게 확인하고 공유하나요?</label>
+          
+          <textarea name="q8" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">지출결의/증빙</div>
+        <div class="field">
+          <label><span class="num">10</span>지출결의서·계약서·견적서·세금계산서·영수증은 현재 어디에 보관/전달하나요?</label>
+          
+          <textarea name="q9" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">11</span>증빙 누락이나 담당자 확인 지연이 자주 발생하는 상황은 무엇인가요?</label>
+          
+          <textarea name="q10" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">금융/입출금</div>
+        <div class="field">
+          <label><span class="num">12</span>은행 입출금 내역과 현장/거래처/계정과목을 매칭할 때 어려운 점은 무엇인가요?</label>
+          
+          <textarea name="q11" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">위하고/회계</div>
+        <div class="field">
+          <label><span class="num">13</span>위하고 또는 세무사무실에 자료를 전달할 때 반복되거나 불편한 작업은 무엇인가요?</label>
+          
+          <textarea name="q12" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">보고/협업</div>
+        <div class="field">
+          <label><span class="num">14</span>대표님/임원진에게 정기적으로 보고하는 숫자나 현황은 무엇인가요?</label>
+          
+          <textarea name="q13" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">15</span>부서 간 요청사항이나 인수인계가 누락되는 경우는 어떤 업무에서 발생하나요?</label>
+          
+          <textarea name="q14" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">도입 부담</div>
+        <div class="field">
+          <label><span class="num">16</span>새 시스템 도입 시 실무자 입장에서 가장 부담되는 점은 무엇인가요?</label>
+          
+          <div class="chips"><label class="chip"><input type="radio" name="q15" value="입력 시간 증가" > <span>입력 시간 증가</span></label><label class="chip"><input type="radio" name="q15" value="기존 업무와 병행" > <span>기존 업무와 병행</span></label><label class="chip"><input type="radio" name="q15" value="사용법 학습" > <span>사용법 학습</span></label><label class="chip"><input type="radio" name="q15" value="책임 증가" > <span>책임 증가</span></label><label class="chip"><input type="radio" name="q15" value="데이터 정리 부담" > <span>데이터 정리 부담</span></label><label class="chip"><input type="radio" name="q15" value="기타" > <span>기타</span></label></div>
+        </div><div class="section-title">개선 우선순위</div>
+        <div class="field">
+          <label><span class="num">17</span>업무 과부하를 줄이기 위해 가장 먼저 자동화/정리되었으면 하는 업무 3가지는 무엇인가요?</label>
+          
+          <textarea name="q16" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">자료요청</div>
+        <div class="field">
+          <label><span class="num">18</span>현장 방문 전 지니어스가 미리 보면 좋은 엑셀/양식/자료가 있다면 적어주세요.</label>
+          
+          <textarea name="q17" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">기타</div>
+        <div class="field">
+          <label><span class="num">19</span>추가로 전달하고 싶은 내용이 있으면 자유롭게 작성해주세요.</label>
+          
+          <textarea name="q18" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+    <div class="actions"><button id="submitBtn" type="submit">답변 제출하기</button><div id="msg" class="message"></div></div>
+  </form></main>
+  <footer>© JINIUS Group · 선일산업 숫자경영 사전 질문지</footer>
+  <script>
+    const form = document.getElementById('survey');
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('msg');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); btn.disabled = true; btn.textContent = '제출 중입니다...'; msg.style.display = 'none';
+      const fd = new FormData(form); const answers = {};
+      for (let i = 0; i < 19; i++) answers['q'+i] = (fd.get('q'+i) || '').toString().trim();
+      try {
+        const res = await fetch('https://decorating-discrimination-height-journalist.trycloudflare.com/api/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({kind:'staff', answers}) });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || '제출에 실패했습니다.');
+        form.reset(); msg.className = 'message ok'; msg.textContent = '제출 완료되었습니다. 소중한 답변 감사합니다.'; msg.style.display = 'block';
+      } catch (err) { msg.className = 'message err'; msg.textContent = '제출 중 오류가 발생했습니다: ' + err.message; msg.style.display = 'block'; }
+      finally { btn.disabled = false; btn.textContent = '답변 제출하기'; }
+    });
+  </script>
+</body>
+</html>

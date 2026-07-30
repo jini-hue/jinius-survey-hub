@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>선일산업 숫자경영 사전 질문지 - 임원진용</title>
+  <style>
+    :root { --navy:#0b1f3a; --deep:#07162a; --line:#d8e2ef; --mist:#f4f7fb; --accent:#1f6feb; --ink:#172033; --muted:#667085; }
+    * { box-sizing:border-box; } body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Apple SD Gothic Neo','Noto Sans KR',sans-serif; background:linear-gradient(135deg,var(--deep),var(--navy) 42%,#123f73); color:var(--ink); }
+    .hero { color:white; padding:42px 18px 30px; text-align:center; } .hero .badge { display:inline-block; border:1px solid rgba(255,255,255,.32); border-radius:999px; padding:7px 13px; font-size:13px; margin-bottom:14px; background:rgba(255,255,255,.08); }
+    h1 { margin:0 auto 12px; max-width:860px; font-size:clamp(27px,5vw,42px); line-height:1.22; } .hero p { margin:0 auto; max-width:760px; color:#d9e6f8; line-height:1.65; }
+    .wrap { max-width:920px; margin:0 auto; padding:0 18px 60px; } .card { background:white; border:1px solid var(--line); border-radius:24px; padding:26px; box-shadow:0 24px 70px rgba(6,18,36,.22); }
+    .switch { display:flex; justify-content:space-between; gap:12px; align-items:center; background:var(--mist); border:1px solid var(--line); border-radius:16px; padding:14px 16px; margin-bottom:22px; color:var(--muted); font-size:14px; } .switch a { color:var(--accent); font-weight:700; text-decoration:none; }
+    .section-title { margin:30px 0 14px; padding:10px 14px; background:#edf4ff; border-left:5px solid var(--accent); border-radius:10px; font-weight:800; color:#10345f; }
+    .field { border:1px solid var(--line); border-radius:18px; padding:18px; margin:14px 0; background:#fff; } label { display:block; font-weight:750; line-height:1.5; } .num { display:inline-flex; width:26px; height:26px; align-items:center; justify-content:center; border-radius:50%; background:var(--navy); color:white; font-size:13px; margin-right:9px; }
+    .hint { margin:8px 0 12px 35px; color:var(--muted); font-size:14px; line-height:1.5; } input[type=text], textarea { width:100%; margin-top:12px; border:1px solid #cfd8e5; border-radius:14px; padding:13px 14px; font:inherit; line-height:1.5; outline:none; background:#fbfdff; } input:focus, textarea:focus { border-color:var(--accent); box-shadow:0 0 0 4px rgba(31,111,235,.12); background:white; }
+    .chips { display:flex; flex-wrap:wrap; gap:9px; margin-top:13px; } .chip { display:inline-flex; align-items:center; gap:7px; padding:9px 12px; border:1px solid #cfd8e5; border-radius:999px; background:#fbfdff; font-weight:600; cursor:pointer; } .chip:has(input:checked) { background:#eaf2ff; border-color:var(--accent); color:#0d4ea6; }
+    .actions { padding-top:22px; margin-top:18px; } button { width:100%; border:0; border-radius:16px; background:linear-gradient(135deg,#1f6feb,#0b4ab0); color:white; padding:17px 20px; font-size:17px; font-weight:850; cursor:pointer; box-shadow:0 12px 30px rgba(31,111,235,.28); } button:disabled { opacity:.55; cursor:not-allowed; }
+    .message { display:none; margin-top:14px; padding:14px; border-radius:14px; font-weight:700; } .ok { background:#ecfdf3; color:#087443; border:1px solid #abefc6; } .err { background:#fff1f3; color:#c01048; border:1px solid #fecdd6; }
+    footer { text-align:center; color:#cbd8ec; padding:20px; font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="hero"><div class="badge">JINIUS 숫자경영 사전진단 · 선일산업 전용</div><h1>선일산업 숫자경영 사전 질문지 - 임원진용</h1><p>도입 의사결정, 현장별 손익, 현금흐름, 원가/증빙 관리 관점의 질문입니다.<br>응답 내용은 지니어스 내부 진단용 구글시트에만 저장됩니다.</p></div>
+  <main class="wrap"><form id="survey" class="card">
+    <div class="switch"><span>현재 질문지: <b>임원진용</b></span><a href="/sunil/staff.html">실무자용으로 이동</a></div>
+    <div class="section-title">기본정보</div>
+        <div class="field">
+          <label><span class="num">1</span>성함</label>
+          
+          <input type="text" name="q0" required placeholder="답변을 입력해주세요">
+        </div>
+        <div class="field">
+          <label><span class="num">2</span>직책/역할</label>
+          
+          <input type="text" name="q1" required placeholder="답변을 입력해주세요">
+        </div>
+        <div class="field">
+          <label><span class="num">3</span>담당 의사결정 범위</label>
+          <p class="hint">예: 수주/견적, 현장관리, 재무, 인사, 구매/외주, 전체 경영 등</p>
+          <textarea name="q2" rows="4" required placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">도입 목적</div>
+        <div class="field">
+          <label><span class="num">4</span>선일산업이 이번 숫자경영 솔루션을 통해 가장 먼저 해결해야 할 경영 문제는 무엇인가요?</label>
+          <p class="hint">현장별 손익, 현금흐름, 원가관리, 지출결의/증빙, 보고체계, 업무 과부하 등</p>
+          <textarea name="q3" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">5</span>기존 위하고/세무사무실 관리만으로는 부족하다고 느끼는 재무·경영 분석 영역은 무엇인가요?</label>
+          
+          <textarea name="q4" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">현장별 손익</div>
+        <div class="field">
+          <label><span class="num">6</span>파이링/건설 현장별로 반드시 관리해야 할 기준 정보는 무엇인가요?</label>
+          <p class="hint">계약금액, 착공/준공일, 계약금/중도금/잔금 일정, 원가 예산, 실행 원가 등</p>
+          <textarea name="q5" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">7</span>현재 현장별 매출·원가·마진을 어느 수준까지 신뢰하고 계신가요?</label>
+          
+          <div class="chips"><label class="chip"><input type="radio" name="q6" value="정확히 신뢰 가능" > <span>정확히 신뢰 가능</span></label><label class="chip"><input type="radio" name="q6" value="일부 현장만 가능" > <span>일부 현장만 가능</span></label><label class="chip"><input type="radio" name="q6" value="엑셀 집계 후 확인 가능" > <span>엑셀 집계 후 확인 가능</span></label><label class="chip"><input type="radio" name="q6" value="거의 파악 어려움" > <span>거의 파악 어려움</span></label></div>
+        </div>
+        <div class="field">
+          <label><span class="num">8</span>진행 중/보류/종료 현장을 구분할 때 필요한 상태값과 관리 기준은 무엇인가요?</label>
+          
+          <textarea name="q7" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">원가/지출결의</div>
+        <div class="field">
+          <label><span class="num">9</span>지출결의서·계약서·견적서·세금계산서 등 증빙을 전자화할 때 가장 우선해야 할 문서는 무엇인가요?</label>
+          
+          <textarea name="q8" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+        <div class="field">
+          <label><span class="num">10</span>계약 매출 대비 실제 실행 원가를 볼 때 꼭 분리해야 하는 원가 항목은 무엇인가요?</label>
+          <p class="hint">재료비, 외주비, 장비비, 인건비, 운반비, 공통비 등</p>
+          <textarea name="q9" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">현금흐름</div>
+        <div class="field">
+          <label><span class="num">11</span>향후 1~3개월 현금흐름 예측에서 반드시 보여야 할 항목은 무엇인가요?</label>
+          <p class="hint">예정 입금, 고정 지출, 예정 지출, 미수금, 미지급금, 잔금 일정 등</p>
+          <textarea name="q10" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">금융/회계연동</div>
+        <div class="field">
+          <label><span class="num">12</span>은행 계좌 내역을 불러와 자동 분류할 경우 필요한 카테고리 기준은 무엇인가요?</label>
+          <p class="hint">위하고 계정과목, 현장코드, 거래처, 지출 용도 등</p>
+          <textarea name="q11" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">리포트/대시보드</div>
+        <div class="field">
+          <label><span class="num">13</span>경영진 대시보드 첫 화면에 반드시 보여야 할 지표 5가지는 무엇인가요?</label>
+          <p class="hint">전체 매출, 전년 대비, 손익분기점, 현장별 마진율, 현금 잔액/예정 등</p>
+          <textarea name="q12" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">운영 리스크</div>
+        <div class="field">
+          <label><span class="num">14</span>새 시스템 도입 시 가장 우려되는 점은 무엇인가요?</label>
+          
+          <div class="chips"><label class="chip"><input type="radio" name="q13" value="현업 업무 과부하" > <span>현업 업무 과부하</span></label><label class="chip"><input type="radio" name="q13" value="이중 입력" > <span>이중 입력</span></label><label class="chip"><input type="radio" name="q13" value="직원 저항" > <span>직원 저항</span></label><label class="chip"><input type="radio" name="q13" value="데이터 신뢰도" > <span>데이터 신뢰도</span></label><label class="chip"><input type="radio" name="q13" value="기존 엑셀 이관" > <span>기존 엑셀 이관</span></label><label class="chip"><input type="radio" name="q13" value="비용" > <span>비용</span></label><label class="chip"><input type="radio" name="q13" value="기타" > <span>기타</span></label></div>
+        </div><div class="section-title">도입 방식</div>
+        <div class="field">
+          <label><span class="num">15</span>현업 부담을 줄이기 위해 어떤 방식의 단계적 도입이 적절하다고 보시나요?</label>
+          <p class="hint">1차: 현장별 손익, 2차: 지출결의/증빙, 3차: 금융연동 등</p>
+          <textarea name="q14" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">현장방문 준비</div>
+        <div class="field">
+          <label><span class="num">16</span>현장 방문 시 반드시 확인해야 할 업무 흐름/담당자/자료는 무엇인가요?</label>
+          
+          <textarea name="q15" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">의사결정</div>
+        <div class="field">
+          <label><span class="num">17</span>도입 여부 판단을 위해 내부 논의에서 추가로 필요한 자료나 샘플은 무엇인가요?</label>
+          
+          <textarea name="q16" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div><div class="section-title">기타</div>
+        <div class="field">
+          <label><span class="num">18</span>추가로 전달하고 싶은 내용이 있으면 자유롭게 작성해주세요.</label>
+          
+          <textarea name="q17" rows="4"  placeholder="구체적으로 작성해주시면 현장 진단에 도움이 됩니다."></textarea>
+        </div>
+    <div class="actions"><button id="submitBtn" type="submit">답변 제출하기</button><div id="msg" class="message"></div></div>
+  </form></main>
+  <footer>© JINIUS Group · 선일산업 숫자경영 사전 질문지</footer>
+  <script>
+    const form = document.getElementById('survey');
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('msg');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); btn.disabled = true; btn.textContent = '제출 중입니다...'; msg.style.display = 'none';
+      const fd = new FormData(form); const answers = {};
+      for (let i = 0; i < 18; i++) answers['q'+i] = (fd.get('q'+i) || '').toString().trim();
+      try {
+        const res = await fetch('https://decorating-discrimination-height-journalist.trycloudflare.com/api/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({kind:'executive', answers}) });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || '제출에 실패했습니다.');
+        form.reset(); msg.className = 'message ok'; msg.textContent = '제출 완료되었습니다. 소중한 답변 감사합니다.'; msg.style.display = 'block';
+      } catch (err) { msg.className = 'message err'; msg.textContent = '제출 중 오류가 발생했습니다: ' + err.message; msg.style.display = 'block'; }
+      finally { btn.disabled = false; btn.textContent = '답변 제출하기'; }
+    });
+  </script>
+</body>
+</html>
