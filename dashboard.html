@@ -94,13 +94,13 @@
       {industry:'부동산/자산관리',sub:'임대/개발/운영',types:'대표자용 · 자산관리용 · 회계담당자용',focus:'자산별 임대수익, 관리비, 대출/이자, CAPEX, 현금흐름',examples:'맥산홀딩스',status:'후보'}
     ];
     const surveys=[
-      {customer:'건설업/인테리어 범용',slug:'construction-interior',industry:'건설업',sub:'인테리어',bundle:'건설업/인테리어 회사 특화 질문지',status:'공유가능',home:'/construction-interior/',executive:'/construction-interior/owner.html',executiveLabel:'대표자',staff:'/construction-interior/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1MZQTy0wj8ejg0Y_eE_usoxzhjbmjvHFBE5EHdsqWPSM/edit',next:'인테리어 고객사 상담/진단 시 링크 공유'},
+      {customer:'건설업/인테리어 범용',slug:'construction-interior',industry:'건설업',sub:'인테리어',bundle:'건설업/인테리어 공통 질문지',status:'공유가능',home:'/construction-interior/',executive:'/construction-interior/owner.html',executiveLabel:'대표자',staff:'/construction-interior/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1MZQTy0wj8ejg0Y_eE_usoxzhjbmjvHFBE5EHdsqWPSM/edit',next:'건설업/인테리어 공통 진단 시 링크 공유'},
       {customer:'선일산업',slug:'sunil',industry:'건설업',sub:'전문건설/파이링',bundle:'선일산업 숫자경영 사전 질문지',status:'응답수집중',home:'/sunil/',executive:'/sunil/executive.html',executiveLabel:'임원진',staff:'/sunil/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1zcYnKwe9KWReLWmi52fm3gENf4qAm1DGL8lnMPOoQQE/edit',next:'선일산업 공유 후 응답 확인'}
     ];
     const templates=[
       {name:'건설업 공통 임원진용',industry:'건설업',sub:'공통',target:'임원진/대표자',status:'초안',desc:'도입목적, 현장별 손익, 원가/지출결의, 현금흐름, 리포트, 도입방식'},
       {name:'건설업 공통 실무자용',industry:'건설업',sub:'공통',target:'실무자',status:'초안',desc:'현재 업무방식, 현장관리, 원가관리, 증빙, 금융/회계, 보고/협업'},
-      {name:'인테리어 전용',industry:'건설업',sub:'인테리어',target:'대표/실무/현장',status:'예정',desc:'견적, 계약변경, 자재/외주, 현장정산, A/S'},
+      {name:'인테리어 공통',industry:'건설업',sub:'인테리어',target:'대표/실무/현장',status:'예정',desc:'견적, 계약변경, 자재/외주, 현장정산, A/S'},
       {name:'종합건설 전용',industry:'건설업',sub:'종합건설',target:'대표/공무/현장소장/회계',status:'예정',desc:'공정률, 기성, 하도급, 실행예산, 미수/미지급'}
     ];
     const badge=(status)=>`<span class="badge ${status==='운영중'||status==='응답수집중'?'b-green':status.includes('예정')?'b-amber':status==='초안'?'b-gray':'b-blue'}">${status}</span>`;
