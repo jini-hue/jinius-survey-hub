@@ -20,6 +20,8 @@
       <h1>업종별 · 상세산업별 질문지 대시보드</h1>
       <p>특정 고객사에 종속되지 않고, 업종 → 상세산업 → 고객사 → 설문유형 순서로 질문지를 축적합니다. 고객사별 응답지는 분리하고, 마스터 시트에는 링크·상태·히스토리만 보관합니다.</p>
       <div class="top-actions">
+        <a href="/money-leak-checklist/">월간 루틴 체크리스트</a>
+        <a href="/diagnosis/">업종별 진단받기</a>
         <a href="/sunil/">선일산업 설문 보기</a>
         <a class="ghost" href="https://docs.google.com/spreadsheets/d/1mnNY0fBQPyt-Yd7DHOgMBIlKuIY8k8OxRa3SfrSdfHI/edit" target="_blank" rel="noreferrer">마스터 관리 시트</a>
         <a class="ghost" href="/">허브 홈</a>
@@ -94,6 +96,7 @@
       {industry:'부동산/자산관리',sub:'임대/개발/운영',types:'대표자용 · 자산관리용 · 회계담당자용',focus:'자산별 임대수익, 관리비, 대출/이자, CAPEX, 현금흐름',examples:'맥산홀딩스',status:'후보'}
     ];
     const surveys=[
+      {customer:'공개 무료 진단링크',slug:'money-leak-checklist',industry:'공통',sub:'자금관리 루틴',bundle:'돈 새는 것 막는 월간 루틴 체크리스트',status:'공유가능',home:'/money-leak-checklist/',executive:'/diagnosis/',executiveLabel:'진단받기',staff:'',sheet:MASTER_SHEET,next:'인스타/스레드 배포용. 마지막 CTA는 업종별 고객 질문링크로 연결'},
       {customer:'건설업/인테리어 범용',slug:'construction-interior',industry:'건설업',sub:'인테리어',bundle:'건설업/인테리어 공통 질문지',status:'공유가능',home:'/construction-interior/',executive:'/construction-interior/owner.html',executiveLabel:'대표자',staff:'/construction-interior/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1MZQTy0wj8ejg0Y_eE_usoxzhjbmjvHFBE5EHdsqWPSM/edit',next:'건설업/인테리어 공통 진단 시 링크 공유'},
       {customer:'선일산업',slug:'sunil',industry:'건설업',sub:'전문건설/파이링',bundle:'선일산업 숫자경영 사전 질문지',status:'응답수집중',home:'/sunil/',executive:'/sunil/executive.html',executiveLabel:'임원진',staff:'/sunil/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1zcYnKwe9KWReLWmi52fm3gENf4qAm1DGL8lnMPOoQQE/edit',next:'선일산업 공유 후 응답 확인'}
     ];
@@ -119,7 +122,7 @@
       document.getElementById('industryGrid').innerHTML=rows.map(x=>`<article class="card"><div class="row"><span class="badge b-blue">${x.industry}</span>${badge(x.status)}</div><h3>${x.sub}</h3><h4>${x.types}</h4><p>${x.focus}</p>${x.examples?`<div class="links"><span class="badge b-gray">예시: ${x.examples}</span></div>`:''}</article>`).join('')||'<p>조건에 맞는 분류가 없습니다.</p>';
     }
     function renderSurveys(){
-      document.getElementById('surveyRows').innerHTML=surveys.map(x=>`<tr><td><b>${x.customer}</b><br><span class="badge b-gray">${x.slug}</span></td><td>${x.industry}</td><td>${x.sub}</td><td>${x.bundle}</td><td>${badge(x.status)}</td><td><div class="links"><a href="${x.home}">선택</a><a href="${x.executive}">${x.executiveLabel||'임원진'}</a><a href="${x.staff}">실무자</a></div></td><td><a class="ghost" href="${x.sheet}" target="_blank" rel="noreferrer">응답지</a></td><td>${x.next}</td></tr>`).join('');
+      document.getElementById('surveyRows').innerHTML=surveys.map(x=>`<tr><td><b>${x.customer}</b><br><span class="badge b-gray">${x.slug}</span></td><td>${x.industry}</td><td>${x.sub}</td><td>${x.bundle}</td><td>${badge(x.status)}</td><td><div class="links"><a href="${x.home}">선택</a>${x.executive?`<a href="${x.executive}">${x.executiveLabel||'임원진'}</a>`:''}${x.staff?`<a href="${x.staff}">실무자</a>`:''}</div></td><td><a class="ghost" href="${x.sheet}" target="_blank" rel="noreferrer">응답지</a></td><td>${x.next}</td></tr>`).join('');
     }
     function renderTemplates(){
       document.getElementById('templateGrid').innerHTML=templates.map(x=>`<article class="card"><div class="row"><span class="badge b-blue">${x.industry} · ${x.sub}</span>${badge(x.status)}</div><h3>${x.name}</h3><h4>${x.target}</h4><p>${x.desc}</p><div class="links"><a class="ghost" href="${MASTER_SHEET}" target="_blank" rel="noreferrer">마스터에서 보기</a></div></article>`).join('');
