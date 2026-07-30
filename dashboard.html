@@ -94,7 +94,8 @@
       {industry:'부동산/자산관리',sub:'임대/개발/운영',types:'대표자용 · 자산관리용 · 회계담당자용',focus:'자산별 임대수익, 관리비, 대출/이자, CAPEX, 현금흐름',examples:'맥산홀딩스',status:'후보'}
     ];
     const surveys=[
-      {customer:'선일산업',slug:'sunil',industry:'건설업',sub:'전문건설/파이링',bundle:'선일산업 숫자경영 사전 질문지',status:'응답수집중',home:'/sunil/',executive:'/sunil/executive.html',staff:'/sunil/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1zcYnKwe9KWReLWmi52fm3gENf4qAm1DGL8lnMPOoQQE/edit',next:'선일산업 공유 후 응답 확인'}
+      {customer:'건설업/인테리어 범용',slug:'construction-interior',industry:'건설업',sub:'인테리어',bundle:'건설업/인테리어 회사 특화 질문지',status:'공유가능',home:'/construction-interior/',executive:'/construction-interior/owner.html',executiveLabel:'대표자',staff:'/construction-interior/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1MZQTy0wj8ejg0Y_eE_usoxzhjbmjvHFBE5EHdsqWPSM/edit',next:'인테리어 고객사 상담/진단 시 링크 공유'},
+      {customer:'선일산업',slug:'sunil',industry:'건설업',sub:'전문건설/파이링',bundle:'선일산업 숫자경영 사전 질문지',status:'응답수집중',home:'/sunil/',executive:'/sunil/executive.html',executiveLabel:'임원진',staff:'/sunil/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1zcYnKwe9KWReLWmi52fm3gENf4qAm1DGL8lnMPOoQQE/edit',next:'선일산업 공유 후 응답 확인'}
     ];
     const templates=[
       {name:'건설업 공통 임원진용',industry:'건설업',sub:'공통',target:'임원진/대표자',status:'초안',desc:'도입목적, 현장별 손익, 원가/지출결의, 현금흐름, 리포트, 도입방식'},
@@ -118,7 +119,7 @@
       document.getElementById('industryGrid').innerHTML=rows.map(x=>`<article class="card"><div class="row"><span class="badge b-blue">${x.industry}</span>${badge(x.status)}</div><h3>${x.sub}</h3><h4>${x.types}</h4><p>${x.focus}</p>${x.examples?`<div class="links"><span class="badge b-gray">예시: ${x.examples}</span></div>`:''}</article>`).join('')||'<p>조건에 맞는 분류가 없습니다.</p>';
     }
     function renderSurveys(){
-      document.getElementById('surveyRows').innerHTML=surveys.map(x=>`<tr><td><b>${x.customer}</b><br><span class="badge b-gray">${x.slug}</span></td><td>${x.industry}</td><td>${x.sub}</td><td>${x.bundle}</td><td>${badge(x.status)}</td><td><div class="links"><a href="${x.home}">선택</a><a href="${x.executive}">임원진</a><a href="${x.staff}">실무자</a></div></td><td><a class="ghost" href="${x.sheet}" target="_blank" rel="noreferrer">응답지</a></td><td>${x.next}</td></tr>`).join('');
+      document.getElementById('surveyRows').innerHTML=surveys.map(x=>`<tr><td><b>${x.customer}</b><br><span class="badge b-gray">${x.slug}</span></td><td>${x.industry}</td><td>${x.sub}</td><td>${x.bundle}</td><td>${badge(x.status)}</td><td><div class="links"><a href="${x.home}">선택</a><a href="${x.executive}">${x.executiveLabel||'임원진'}</a><a href="${x.staff}">실무자</a></div></td><td><a class="ghost" href="${x.sheet}" target="_blank" rel="noreferrer">응답지</a></td><td>${x.next}</td></tr>`).join('');
     }
     function renderTemplates(){
       document.getElementById('templateGrid').innerHTML=templates.map(x=>`<article class="card"><div class="row"><span class="badge b-blue">${x.industry} · ${x.sub}</span>${badge(x.status)}</div><h3>${x.name}</h3><h4>${x.target}</h4><p>${x.desc}</p><div class="links"><a class="ghost" href="${MASTER_SHEET}" target="_blank" rel="noreferrer">마스터에서 보기</a></div></article>`).join('');
