@@ -1,1 +1,129 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>지니어스 설문 현황 대시보드</title><style>body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f4f7fb;color:#172033}.hero{background:linear-gradient(135deg,#07162a,#123f73);color:white;padding:38px 20px}.hero-inner,.wrap{max-width:1120px;margin:0 auto}h1{margin:0 0 10px;font-size:36px}.hero p{margin:0;color:#d9e6f8;line-height:1.65}.wrap{padding:26px 20px 70px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:-42px 0 26px}.metric{background:white;border:1px solid #d8e2ef;border-radius:20px;padding:20px;box-shadow:0 14px 40px rgba(6,18,36,.12)}.metric b{font-size:30px;color:#0b4ab0}.section{margin-top:28px}.section h2{font-size:23px;margin:0 0 14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px}.card{background:white;border:1px solid #d8e2ef;border-radius:22px;padding:22px;box-shadow:0 12px 34px rgba(6,18,36,.08)}.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.badge{border-radius:999px;padding:7px 11px;font-size:13px;font-weight:850}.customer{background:#eaf2ff;color:#0b4ab0}.recruit{background:#ecfdf3;color:#087443}.status{font-size:13px;color:#667085}h3{margin:18px 0 5px;font-size:24px}h4{margin:0 0 12px;color:#475467}p{line-height:1.7;color:#475467}.links{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}a,.disabled{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:12px;text-decoration:none;font-weight:800;border:1px solid #d8e2ef}a{background:#0b4ab0;color:white}a.sheet{background:white;color:#0b4ab0}.disabled{background:#f2f4f7;color:#98a2b3}.note{background:#fff7e6;border:1px solid #fedf89;border-radius:18px;padding:16px;margin-top:22px;color:#7a4b00;line-height:1.6}@media(max-width:760px){.summary{grid-template-columns:1fr;margin-top:18px}h1{font-size:30px}}</style></head><body><header class="hero"><div class="hero-inner"><h1>지니어스 설문 현황 대시보드</h1><p>고객사 전용 설문과 고객 모집용 설문을 구분해 목적, 설문 링크, 응답지 링크를 한 곳에서 확인합니다.</p></div></header><main class="wrap"><section class="summary"><div class="metric"><span>전체 설문</span><br><b>2</b></div><div class="metric"><span>고객사 전용</span><br><b>1</b></div><div class="metric"><span>고객 모집용</span><br><b>1</b></div></section><section class="section"><h2>1. 고객사 전용 설문</h2><div class="grid"><article class="card"><div class="row"><span class="badge customer">고객사 전용</span><span class="status">응답 수집 준비</span></div><h3>선일산업</h3><h4>선일산업 숫자경영 사전 질문지</h4><p>건설/파이링 현장별 손익, 현금흐름, 원가·증빙관리, 시스템 도입 부담 진단</p><div class="links"><a href="/sunil/">설문 선택 페이지</a><a href="/sunil/executive.html">임원진용</a><a href="/sunil/staff.html">실무자용</a><a class="sheet" href="https://docs.google.com/spreadsheets/d/1zcYnKwe9KWReLWmi52fm3gENf4qAm1DGL8lnMPOoQQE/edit" target="_blank" rel="noreferrer">응답지 구글시트</a></div></article></div></section><section class="section"><h2>2. 고객 모집용 설문</h2><div class="grid"><article class="card"><div class="row"><span class="badge recruit">고객 모집용</span><span class="status">준비 예정</span></div><h3>지니어스 숫자경영 사전진단 신청서</h3><p>전체 잠재 고객 대상으로 숫자경영/관리OS 컨설팅 니즈 접수 및 상담 리드 확보</p><div class="links"><span class="disabled">설문 링크 준비 예정</span><span class="disabled">응답지 링크 준비 예정</span></div></article></div></section><div class="note">운영 관리용 마스터 시트: <a class="sheet" href="https://docs.google.com/spreadsheets/d/1SfhOez8QmEJcwl3xBKCaJWPXJe1oJQ0IjVg4sQubygY/edit" target="_blank" rel="noreferrer">지니어스_고객사_숫자경영진단_마스터</a><br>고정 도메인 연결 후 이 페이지는 <b>https://survey.jiniusgroup.com/dashboard</b>로 운영하면 됩니다.</div></main></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JINIUS Survey Hub · 업종별 질문지 대시보드</title>
+  <style>
+    :root{--navy:#0b1f3a;--deep:#07162a;--blue:#1f6feb;--sky:#eaf2ff;--green:#087443;--mint:#ecfdf3;--amber:#b54708;--cream:#fff7e6;--line:#d8e2ef;--bg:#f4f7fb;--ink:#172033;--muted:#667085;--white:#fff;--danger:#c01048}
+    *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink)}
+    .hero{background:radial-gradient(circle at top right,rgba(31,111,235,.45),transparent 34%),linear-gradient(135deg,var(--deep),var(--navy) 48%,#123f73);color:white;padding:38px 20px 78px}.hero-inner,.wrap{max-width:1180px;margin:0 auto}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 12px;background:rgba(255,255,255,.08);font-size:13px;font-weight:800}.hero h1{font-size:clamp(31px,5vw,48px);line-height:1.16;margin:16px 0 12px}.hero p{max-width:880px;margin:0;color:#d9e6f8;line-height:1.7}.top-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.top-actions a{background:white;color:var(--navy);border:0}
+    .wrap{padding:0 20px 70px}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-48px}.metric{background:white;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 18px 45px rgba(6,18,36,.13)}.metric span{display:block;color:var(--muted);font-size:13px;font-weight:750}.metric b{display:block;margin-top:8px;font-size:32px;color:#0b4ab0}.metric small{color:var(--muted)}
+    .panel{background:white;border:1px solid var(--line);border-radius:24px;padding:22px;margin-top:20px;box-shadow:0 12px 34px rgba(6,18,36,.07)}.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:16px}.section-head h2{font-size:24px;margin:0 0 6px}.section-head p{margin:0;color:var(--muted);line-height:1.6}.filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}select,input{border:1px solid #cfd8e5;border-radius:12px;padding:11px 12px;font:inherit;background:#fbfdff;min-width:170px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:20px;padding:18px;background:#fff;box-shadow:0 8px 24px rgba(6,18,36,.05)}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.badge{display:inline-flex;align-items:center;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900}.b-blue{background:var(--sky);color:#0b4ab0}.b-green{background:var(--mint);color:var(--green)}.b-amber{background:var(--cream);color:var(--amber)}.b-gray{background:#f2f4f7;color:#475467}.b-red{background:#fff1f3;color:var(--danger)}.card h3{font-size:22px;margin:15px 0 6px}.card h4{font-size:15px;margin:0 0 10px;color:#475467}.card p{color:#475467;line-height:1.65;margin:0}.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}a,.linklike{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:12px;border:1px solid var(--line);padding:10px 12px;font-weight:850;background:#0b4ab0;color:white}.ghost{background:white;color:#0b4ab0}.disabled{background:#f2f4f7;color:#98a2b3;cursor:not-allowed}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:18px}table{width:100%;border-collapse:collapse;background:white;min-width:980px}th,td{border-bottom:1px solid var(--line);padding:13px 12px;text-align:left;vertical-align:top}th{background:#0b1f3a;color:white;font-size:13px;white-space:nowrap}td{font-size:14px;color:#344054}.note{background:var(--cream);border:1px solid #fedf89;border-radius:18px;padding:16px;color:#7a4b00;line-height:1.65}.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;counter-reset:step}.step{background:#fbfdff;border:1px dashed #b7c7da;border-radius:18px;padding:16px}.step:before{counter-increment:step;content:counter(step);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--navy);color:white;font-weight:900;margin-bottom:10px}.step b{display:block}.step span{display:block;color:var(--muted);line-height:1.55;margin-top:6px}.hidden{display:none!important}footer{text-align:center;color:#98a2b3;padding:28px 20px 50px}
+    @media(max-width:820px){.summary{grid-template-columns:1fr 1fr}.section-head{display:block}.hero{padding-bottom:58px}}@media(max-width:560px){.summary{grid-template-columns:1fr}.top-actions a,.links a{width:100%}select,input{width:100%}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">JINIUS Survey Hub · 고객 진단 질문지 자산관리</div>
+      <h1>업종별 · 상세산업별 질문지 대시보드</h1>
+      <p>특정 고객사에 종속되지 않고, 업종 → 상세산업 → 고객사 → 설문유형 순서로 질문지를 축적합니다. 고객사별 응답지는 분리하고, 마스터 시트에는 링크·상태·히스토리만 보관합니다.</p>
+      <div class="top-actions">
+        <a href="/sunil/">선일산업 설문 보기</a>
+        <a class="ghost" href="https://docs.google.com/spreadsheets/d/1mnNY0fBQPyt-Yd7DHOgMBIlKuIY8k8OxRa3SfrSdfHI/edit" target="_blank" rel="noreferrer">마스터 관리 시트</a>
+        <a class="ghost" href="/">허브 홈</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="summary">
+      <div class="metric"><span>대분류 업종</span><b id="m-industries">-</b><small>건설업, 제조업, 유통/커머스 등</small></div>
+      <div class="metric"><span>상세산업 분류</span><b id="m-subindustries">-</b><small>인테리어, 종합건설, 파이링 등</small></div>
+      <div class="metric"><span>등록 고객사</span><b id="m-customers">-</b><small>현재 선일산업 등록</small></div>
+      <div class="metric"><span>운영 중 설문</span><b id="m-active">-</b><small>응답수집중/공유가능 기준</small></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div><h2>설문 운영 원칙</h2><p>질문지는 업종별 자산으로 만들고, 고객사에는 필요한 문항만 조합해 전용 링크로 제공합니다.</p></div>
+      </div>
+      <div class="flow">
+        <div class="step"><b>업종 선택</b><span>건설업, 제조업, 유통/커머스, 외식, 서비스, R&D 등</span></div>
+        <div class="step"><b>상세산업 선택</b><span>인테리어, 종합건설, 전문건설/파이링처럼 실제 업무흐름 기준으로 분리</span></div>
+        <div class="step"><b>대상자 선택</b><span>대표자용, 임원진용, 실무자용, 현장관리자용, 회계담당자용 등</span></div>
+        <div class="step"><b>고객사 전용화</b><span>고객사명·업무맥락·회의요약을 반영하고 응답지는 고객사별로 분리</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div><h2>업종 · 상세산업 분류</h2><p>앞으로 질문지를 만들 때 이 분류를 기준으로 템플릿과 고객 히스토리를 쌓습니다.</p></div>
+      </div>
+      <div class="filters">
+        <select id="industryFilter"><option value="all">전체 업종</option></select>
+        <select id="statusFilter"><option value="all">전체 상태</option><option>운영중</option><option>템플릿화 예정</option><option>후보</option></select>
+        <input id="searchInput" placeholder="상세산업/키워드 검색">
+      </div>
+      <div id="industryGrid" class="grid" style="margin-top:16px"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div><h2>고객사별 설문 히스토리</h2><p>응답 데이터는 고객사별 시트로 분리하고, 이 대시보드는 설문 링크와 운영 상태를 관리합니다.</p></div>
+        <a class="ghost" href="https://docs.google.com/spreadsheets/d/1mnNY0fBQPyt-Yd7DHOgMBIlKuIY8k8OxRa3SfrSdfHI/edit" target="_blank" rel="noreferrer">마스터 시트 열기</a>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>고객사</th><th>업종</th><th>상세산업</th><th>설문묶음</th><th>상태</th><th>링크</th><th>응답지</th><th>다음 액션</th></tr></thead><tbody id="surveyRows"></tbody></table></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><div><h2>질문지 템플릿 보관함</h2><p>같은 업종 고객사가 생길 때마다 처음부터 만들지 않고 템플릿을 복제·수정합니다.</p></div></div>
+      <div id="templateGrid" class="grid"></div>
+    </section>
+
+    <section class="panel note">
+      <b>운영 메모</b><br>
+      현재 선일산업은 첫 고객사 전용 설문으로 등록했습니다. 다음 단계에서는 건설업 공통 템플릿을 만든 뒤, 인테리어/종합건설/전문건설별 문항 차이를 분리하면 지니어스의 반복 진단 자산으로 축적됩니다.
+    </section>
+  </main>
+  <footer>© JINIUS Group · Survey Hub</footer>
+
+  <script>
+    const MASTER_SHEET='https://docs.google.com/spreadsheets/d/1mnNY0fBQPyt-Yd7DHOgMBIlKuIY8k8OxRa3SfrSdfHI/edit';
+    const industries=[
+      {industry:'건설업',sub:'인테리어',types:'대표자용 · 임원진용 · 실무자용 · 현장관리자용',focus:'견적/계약변경, 프로젝트별 원가, 자재·외주, 현장정산, A/S',examples:'오드리서울, 인테리어 고객사',status:'템플릿화 예정'},
+      {industry:'건설업',sub:'종합건설',types:'대표자용 · 임원진용 · 공무/현장소장용 · 회계담당자용',focus:'공정률, 기성/미수, 하도급, 실행예산, 자금계획',examples:'종합건설 고객사',status:'템플릿화 예정'},
+      {industry:'건설업',sub:'전문건설/파이링',types:'임원진용 · 실무자용 · 현장관리자용',focus:'현장별 계약·원가·장비/인력·입금일정·증빙관리',examples:'선일산업',status:'운영중'},
+      {industry:'제조업',sub:'식품/소비재 제조',types:'대표자용 · 생산관리자용 · 회계/구매담당자용',focus:'원재료, 생산원가, 재고, 출고, 매출채권, 현금흐름',examples:'',status:'후보'},
+      {industry:'제조업',sub:'설비/부품 제조',types:'대표자용 · 영업/견적용 · 생산/구매용',focus:'수주-생산-납품, 외주가공, BOM/원가, 납기, 재고',examples:'',status:'후보'},
+      {industry:'유통/커머스',sub:'온라인몰/브랜드',types:'대표자용 · 운영자용 · 정산담당자용',focus:'채널별 매출, 광고비, 정산입금, 재고, CS/반품, 수익성',examples:'',status:'후보'},
+      {industry:'외식/프랜차이즈',sub:'직영점/가맹점',types:'대표자용 · 점장용 · 정산/회계용',focus:'지점별 손익, 식자재 원가, 인건비, 배달정산, VAT/현금흐름',examples:'',status:'후보'},
+      {industry:'서비스업',sub:'전문서비스/컨설팅',types:'대표자용 · PM용 · 운영담당자용',focus:'프로젝트별 매출, 투입시간, 외주비, 인건비, 청구/미수',examples:'',status:'후보'},
+      {industry:'R&D/기술서비스',sub:'정부과제/연구용역',types:'대표자용 · 연구책임자용 · 정산담당자용',focus:'과제별 예산, 인건비, 증빙, 집행률, 정산 리스크',examples:'몰림',status:'후보'},
+      {industry:'부동산/자산관리',sub:'임대/개발/운영',types:'대표자용 · 자산관리용 · 회계담당자용',focus:'자산별 임대수익, 관리비, 대출/이자, CAPEX, 현금흐름',examples:'맥산홀딩스',status:'후보'}
+    ];
+    const surveys=[
+      {customer:'선일산업',slug:'sunil',industry:'건설업',sub:'전문건설/파이링',bundle:'선일산업 숫자경영 사전 질문지',status:'응답수집중',home:'/sunil/',executive:'/sunil/executive.html',staff:'/sunil/staff.html',sheet:'https://docs.google.com/spreadsheets/d/1zcYnKwe9KWReLWmi52fm3gENf4qAm1DGL8lnMPOoQQE/edit',next:'선일산업 공유 후 응답 확인'}
+    ];
+    const templates=[
+      {name:'건설업 공통 임원진용',industry:'건설업',sub:'공통',target:'임원진/대표자',status:'초안',desc:'도입목적, 현장별 손익, 원가/지출결의, 현금흐름, 리포트, 도입방식'},
+      {name:'건설업 공통 실무자용',industry:'건설업',sub:'공통',target:'실무자',status:'초안',desc:'현재 업무방식, 현장관리, 원가관리, 증빙, 금융/회계, 보고/협업'},
+      {name:'인테리어 전용',industry:'건설업',sub:'인테리어',target:'대표/실무/현장',status:'예정',desc:'견적, 계약변경, 자재/외주, 현장정산, A/S'},
+      {name:'종합건설 전용',industry:'건설업',sub:'종합건설',target:'대표/공무/현장소장/회계',status:'예정',desc:'공정률, 기성, 하도급, 실행예산, 미수/미지급'}
+    ];
+    const badge=(status)=>`<span class="badge ${status==='운영중'||status==='응답수집중'?'b-green':status.includes('예정')?'b-amber':status==='초안'?'b-gray':'b-blue'}">${status}</span>`;
+    function init(){
+      document.getElementById('m-industries').textContent=new Set(industries.map(x=>x.industry)).size;
+      document.getElementById('m-subindustries').textContent=industries.length;
+      document.getElementById('m-customers').textContent=surveys.length;
+      document.getElementById('m-active').textContent=surveys.filter(x=>['응답수집중','공유가능'].includes(x.status)).length;
+      const sel=document.getElementById('industryFilter'); [...new Set(industries.map(x=>x.industry))].forEach(v=>sel.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
+      ['industryFilter','statusFilter','searchInput'].forEach(id=>document.getElementById(id).addEventListener('input',renderIndustries));
+      renderIndustries(); renderSurveys(); renderTemplates();
+    }
+    function renderIndustries(){
+      const i=document.getElementById('industryFilter').value, s=document.getElementById('statusFilter').value, q=document.getElementById('searchInput').value.trim().toLowerCase();
+      const rows=industries.filter(x=>(i==='all'||x.industry===i)&&(s==='all'||x.status===s)&&(!q||(x.sub+x.focus+x.types+x.examples).toLowerCase().includes(q)));
+      document.getElementById('industryGrid').innerHTML=rows.map(x=>`<article class="card"><div class="row"><span class="badge b-blue">${x.industry}</span>${badge(x.status)}</div><h3>${x.sub}</h3><h4>${x.types}</h4><p>${x.focus}</p>${x.examples?`<div class="links"><span class="badge b-gray">예시: ${x.examples}</span></div>`:''}</article>`).join('')||'<p>조건에 맞는 분류가 없습니다.</p>';
+    }
+    function renderSurveys(){
+      document.getElementById('surveyRows').innerHTML=surveys.map(x=>`<tr><td><b>${x.customer}</b><br><span class="badge b-gray">${x.slug}</span></td><td>${x.industry}</td><td>${x.sub}</td><td>${x.bundle}</td><td>${badge(x.status)}</td><td><div class="links"><a href="${x.home}">선택</a><a href="${x.executive}">임원진</a><a href="${x.staff}">실무자</a></div></td><td><a class="ghost" href="${x.sheet}" target="_blank" rel="noreferrer">응답지</a></td><td>${x.next}</td></tr>`).join('');
+    }
+    function renderTemplates(){
+      document.getElementById('templateGrid').innerHTML=templates.map(x=>`<article class="card"><div class="row"><span class="badge b-blue">${x.industry} · ${x.sub}</span>${badge(x.status)}</div><h3>${x.name}</h3><h4>${x.target}</h4><p>${x.desc}</p><div class="links"><a class="ghost" href="${MASTER_SHEET}" target="_blank" rel="noreferrer">마스터에서 보기</a></div></article>`).join('');
+    }
+    init();
+  </script>
+</body>
+</html>
